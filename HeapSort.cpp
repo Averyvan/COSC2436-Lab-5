@@ -3,7 +3,8 @@
 #include <iostream>
 using namespace std;
 
-void MAX_HEAPIFY(int a[], int i, int n)
+template<class ItemType>
+void MAX_HEAPIFY(ItemType a[], int i, int n)
 {
     int l,r,largest,loc;
     l=2*i;
@@ -22,14 +23,18 @@ void MAX_HEAPIFY(int a[], int i, int n)
          MAX_HEAPIFY(a, largest,n);
     }
 }
-void BUILD_MAX_HEAP(int a[], int n)
+
+template<class ItemType>
+void BUILD_MAX_HEAP(ItemType a[], int n)
 {
     for(int k = n/2; k >= 1; k--)
     {
         MAX_HEAPIFY(a, k, n);
     }
 }
-void HEAPSORT(int a[], int n)
+
+template<class ItemType>
+void HEAPSORT(ItemType a[], int n)
 {
 
     BUILD_MAX_HEAP(a,n);
