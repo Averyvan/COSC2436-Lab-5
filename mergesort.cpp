@@ -100,7 +100,8 @@ void mergeSort(ItemType theArray[], int first, int last)
 
 int main()
 {
-   std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
+//   std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
+	std::string a[6] = {"a", "aa", "aca", "aab", "ab", "z"};
    mergeSort(a, 0, 5);
    for (int i = 0; i < 6; i++)
       std::cout << a[i] << " ";
