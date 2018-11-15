@@ -65,6 +65,9 @@ void trialRuns(int trials, ofstream &outFile, string sortName, void (*sortAlg)(T
 	double average = (finish - start)/trials;//finds average time to complete each trial
 	outFile << "Time Elapsed: " << setw(5) << elapsed << " seconds" << endl; //displays elapsed time
 	outFile << "Average time trial over " << trials << " times: " << setw(5) << average << " seconds with "<<size<< " elements\n" <<endl; //displays average time
+	for(int i=0; i < trials; i++)
+		delete[] array[i];
+	delete[] array;
 }
 
 template<class T>
@@ -90,6 +93,9 @@ void trialRuns2(int trials, ofstream &outFile, string sortName, void (*sortAlg)(
 	double average = (finish - start)/trials;//finds average time to complete each trial
 	outFile << "Time Elapsed: " << setw(5) << elapsed << " seconds" << endl; //displays elapsed time
 	outFile << "Average time trial over " << trials << " times: " << setw(5) << average << " seconds with "<<size<< " elements\n" <<endl; //displays average time
+	for(int i=0; i < trials; i++)
+		delete[] array[i];
+	delete[] array;
 }
 
 template<class T>
@@ -283,23 +289,25 @@ int main()
 				int strRuns[3] = {100000, 250000, 440000};
 				int trials = 5;
 //				for (int size:intRuns) trialRuns<int>(trials, outFile, "bubbleSort", bubbleSort, size, fillIntArray);
-				for (int size:intRuns) trialRuns<int>(trials, outFile, "HEAPSORT", HEAPSORT, size, fillIntArray);
-				for (int size:intRuns) trialRuns<int>(trials, outFile, "insertionSort", insertionSort, size, fillIntArray);
-				for (int size:intRuns) trialRuns2<int>(trials, outFile, "mergeSort", mergeSort, size, fillIntArray);
-				for (int size:intRuns) trialRuns2<int>(trials, outFile, "quickSort", quickSort, size, fillIntArray);
-				for (int size:intRuns) trialRuns<int>(trials, outFile, "radixsort", radixsort, size, fillIntArray);
-				for (int size:intRuns) trialRuns<int>(trials, outFile, "selectionSort", selectionSort, size, fillIntArray);
-				for (int size:intRuns) trialRuns<int>(trials, outFile, "shellSort", shellSort, size, fillIntArray);
-				for (int size:intRuns) trialSTLsort(trials, outFile, size, fillIntArray);
+//				for (int size:intRuns) trialRuns<int>(trials, outFile, "HEAPSORT", HEAPSORT, size, fillIntArray);
+//				for (int size:intRuns) trialRuns<int>(trials, outFile, "insertionSort", insertionSort, size, fillIntArray);
+//				for (int size:intRuns) trialRuns2<int>(trials, outFile, "mergeSort", mergeSort, size, fillIntArray);
+//				for (int size:intRuns) trialRuns2<int>(trials, outFile, "quickSort", quickSort, size, fillIntArray);
+//				for (int size:intRuns) trialRuns<int>(trials, outFile, "radixsort", radixsort, size, fillIntArray);
+//				for (int size:intRuns) trialRuns<int>(trials, outFile, "selectionSort", selectionSort, size, fillIntArray);
+//				for (int size:intRuns) trialRuns<int>(trials, outFile, "shellSort", shellSort, size, fillIntArray);
+//				for (int size:intRuns) trialSTLsort(trials, outFile, size, fillIntArray);
 				cout<<"String runs...\n";
-				outFile<<"String Testing\n";
-				for (int size:strRuns) trialRuns<string>(trials, outFile, "bubbleSort", bubbleSort, size, fillStrArray);
-				for (int size:strRuns) trialRuns<string>(trials, outFile, "insertionSort", insertionSort, size, fillStrArray);
-				for (int size:strRuns) trialRuns2<string>(trials, outFile, "mergeSort", mergeSort, size, fillStrArray);
-				for (int size:strRuns) trialRuns2<string>(trials, outFile, "quickSort", quickSort, size, fillStrArray);
-				for (int size:strRuns) trialRuns<string>(trials, outFile, "radixSort", radixSort, size, fillStrArray);
-				for (int size:strRuns) trialRuns<string>(trials, outFile, "selectionSort", selectionSort, size, fillStrArray);
-				for (int size:strRuns) trialRuns<string>(trials, outFile, "shellSort", shellSort, size, fillStrArray);
+//				outFile<<"String Testing\n";
+//				for (int size:strRuns) trialRuns<string>(trials, outFile, "bubbleSort", bubbleSort, size, fillStrArray);
+//				for (int size:strRuns) trialRuns<string>(trials, outFile, "insertionSort", insertionSort, size, fillStrArray);
+
+//				for (int size:strRuns) trialRuns2<string>(trials, outFile, "mergeSort", mergeSort, size, fillStrArray);
+
+//				for (int size:strRuns) trialRuns2<string>(trials, outFile, "quickSort", quickSort, size, fillStrArray);
+//				for (int size:strRuns) trialRuns<string>(trials, outFile, "radixSort", radixSort, size, fillStrArray);
+				for (int size:strRuns) trialRuns<string>(1, outFile, "selectionSort", selectionSort, size, fillStrArray);
+				for (int size:strRuns) trialRuns<string>(1, outFile, "shellSort", shellSort, size, fillStrArray);
 				for (int size:strRuns) trialSTLsort(trials, outFile, size, fillStrArray);
 				cout<<"We're done!\n";
 				break;
