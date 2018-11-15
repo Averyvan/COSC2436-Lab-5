@@ -1,3 +1,11 @@
+//Author:               Avery Vanausdal
+//Assignment Number:    Lab 5
+//File Name:			AveryVanAusdalLab6Part1Driver.cpp
+//Course/Selection:     COSC 2436 Section 003
+//Due Date:             11/12/18
+//Instructor:           Ku, Bernard
+//Description:			Menu testing different sorting algorithms
+
 #include <iostream>
 #include <algorithm>
 #include <array>

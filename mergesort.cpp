@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-const int MAX_SIZE = 50;
+const int MAX_SIZE = 250000;
 
 /** Merges two sorted array segments theArray[first..mid] and
     theArray[mid+1..last] into one sorted array.
