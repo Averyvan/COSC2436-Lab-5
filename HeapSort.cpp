@@ -44,7 +44,7 @@ void HEAPSORT(int a[], int n)
         MAX_HEAPIFY(a, 1, i - 1);
     }
 }
-
+/*
 int main()
 {
     int n;
@@ -64,3 +64,4 @@ int main()
     }
     return (0);
 }
+*/

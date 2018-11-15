@@ -97,7 +97,7 @@ void mergeSort(ItemType theArray[], int first, int last)
       merge(theArray, first, mid, last);
    }  // end if
 }  // end mergeSort
-
+/*
 int main()
 {
 //   std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
@@ -108,7 +108,7 @@ int main()
    std::cout << std::endl;
    
 }  // end main
-
+*/
 /*
 
  B F K R X Z 

@@ -14,6 +14,7 @@ void insertionSort(ItemType theArray[], int n);
  @post  theArray is sorted into ascending order; n is unchanged.
  @param theArray  The given array.
  @param n  The size of theArray. */
+ /*
 int main()
 {
    std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
@@ -22,7 +23,7 @@ int main()
       std::cout << a[i] << " ";
    std::cout << std::endl;
 }  // end main
-
+*/
 template<class ItemType>
 void insertionSort(ItemType theArray[], int n)
 {

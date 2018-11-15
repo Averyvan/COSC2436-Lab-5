@@ -4,7 +4,7 @@
 #include <typeinfo>
 
 using std::string;
-/*
+
 size_t getMax(string arr[], int n){
     size_t max = arr[0].size();
     for (int i = 1; i < n; i++){
@@ -13,7 +13,7 @@ size_t getMax(string arr[], int n){
     }
     return max;
 }
-*/
+/*
 template<class ItemType>
 size_t getMax(ItemType arr[], int n)
 {
@@ -23,8 +23,8 @@ size_t getMax(ItemType arr[], int n)
             max = arr[i];
     return max;
 }
+*/
 
-/*
 void countSort(string a[], int size, size_t k){
     string *b = NULL; int *c = NULL;
     b = new string[size];
@@ -58,7 +58,7 @@ void countSort(string a[], int size, size_t k){
     delete[] b;
     delete[] c;
 }
-*/
+/*
 template<class ItemType>
 void countSort(ItemType arr[], int n, int exp)
 {
@@ -76,14 +76,14 @@ void countSort(ItemType arr[], int n, int exp)
     for (i = 0; i < n; i++)
         arr[i] = output[i];
 }
-/*
+*/
 void radixSort(string b[], int r){
     size_t max = getMax(b, r);
     for (size_t digit = max; digit > 0; digit--){ // size_t is unsigned, so avoid using digit >= 0, which is always true
         countSort(b, r, digit - 1);
     }
 }
-*/
+/*
 template<class ItemType>
 void radixSort(ItemType arr[], int n)
 {
@@ -91,7 +91,8 @@ void radixSort(ItemType arr[], int n)
     for (int exp = 1; m / exp > 0; exp *= 10)
         countSort(arr, n, exp);
 }
-
+*/
+/*
 int main(void) {
     string data[] = {
         "aaaba",
@@ -128,3 +129,4 @@ int main(void) {
         
     return 0;
 }
+*/
