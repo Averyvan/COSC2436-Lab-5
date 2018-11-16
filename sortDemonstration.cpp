@@ -1,6 +1,6 @@
 //Author:               Avery Vanausdal
 //Assignment Number:    Lab 5
-//File Name:			AveryVanAusdalLab5Part1Driver.cpp
+//File Name:		sortDemonstration.cpp
 //Course/Selection:     COSC 2436 Section 003
 //Due Date:             11/12/18
 //Instructor:           Ku, Bernard
