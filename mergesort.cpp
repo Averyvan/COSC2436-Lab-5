@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-const int MAX_SIZE = 50;
+const int MAX_SIZE = 250000;
 
 /** Merges two sorted array segments theArray[first..mid] and
     theArray[mid+1..last] into one sorted array.
@@ -97,17 +97,18 @@ void mergeSort(ItemType theArray[], int first, int last)
       merge(theArray, first, mid, last);
    }  // end if
 }  // end mergeSort
-
+/*
 int main()
 {
-   std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
+//   std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
+	std::string a[6] = {"a", "aa", "aca", "aab", "ab", "z"};
    mergeSort(a, 0, 5);
    for (int i = 0; i < 6; i++)
       std::cout << a[i] << " ";
    std::cout << std::endl;
    
 }  // end main
-
+*/
 /*
 
  B F K R X Z 

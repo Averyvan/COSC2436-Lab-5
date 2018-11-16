@@ -38,7 +38,7 @@ void bubbleSort(ItemType theArray[], int n)
       pass++;
    }  // end while
 }  // end bubbleSort
-
+/*
 int main()
 {
    std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
@@ -47,7 +47,7 @@ int main()
       std::cout << a[i] << " ";
    std::cout << std::endl;   
 }  // end main
-
+*/
 /*
 
  B F K R X Z 

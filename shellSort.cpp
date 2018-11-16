@@ -24,7 +24,7 @@ void shellSort(ItemType theArray[], int n)
       }  // end for
    }  // end for
 }  // end shellSort
-
+/*
 int main()
 {
    std::string a[6] = {"Z", "X", "R", "K", "F", "B"};
@@ -39,7 +39,7 @@ int main()
       std::cout << b[i] << " ";
    std::cout << std::endl;
 }  // end main
-
+*/
 /*
  
  B F K R X Z
